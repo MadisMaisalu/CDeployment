@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Simplon-Medium;
+  src: url("resources/fonts/SimplonBP-Medium.otf");
+}
+@font-face {
+  font-family: Simplon-Light;
+  src: url("resources/fonts/SimplonBP-Light.otf");
+}
+@font-face {
+  font-family: Simplon-Bold;
+  src: url("resources/fonts/SimplonBP-Bold.otf");
+}
+
+body, h1, h2, h3, a {
+  margin: 0;
+  font-family: Simplon-Light;
+  color: #404041;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.highlight-content {
+  font-family: Simplon-Medium;
+}
