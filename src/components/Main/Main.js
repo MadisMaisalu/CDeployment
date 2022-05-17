@@ -1,7 +1,7 @@
 import React from 'react';
 import './main.css';
 import {swapColor} from "../App/App";
-import {currentlyActive, makeActive} from "../Keywords/Keywords.js";
+import {currentlyActive} from "../Keywords/Keywords.js";
 import {
     keywordContent,
     examplesContent,
