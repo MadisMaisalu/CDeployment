@@ -1,0 +1,18 @@
+
+{
+  "noomservice":{
+    "http":"",
+    "server": "",
+    "port": "",
+    "username":"",
+    "password":"",
+    "token": "",
+    "verdoc_keyword_qid": "",
+    "verdoc_keyword_rel_qid": "",
+    "verdoc_version_qid": "",
+    "verdoc_ver_updates_qid": "",
+    "verdoc_version_rel_qid": "",
+    "verdoc_version_rel2_qid": "",
+    "verdoc_rel_post_qid":""
+  }
+}
