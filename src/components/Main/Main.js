@@ -101,6 +101,8 @@ export async function displayKeywordContent(id) {
             case 'GLOBVAR':
                 type = 'Globaalne muutuja'
                 break;
+            default:
+                type = ''
         }
 
         let deprecation = keywordContent.deprecated;
