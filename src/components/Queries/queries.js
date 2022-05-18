@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import {addKeywords} from "../Keywords/Keywords";
 let data = require('../configuration.json');
