@@ -28,7 +28,6 @@ jobs:
     - run: npm i
     - run: npm install pm2@latest -g
     - run: npm run build
-    # - run: serve build jooksutamiseks
     - name: Configure SSH
       run: |
         mkdir -p ~/.ssh/
@@ -45,13 +44,13 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_KEY: ${{ secrets.SSH_KEY }}
           SSH_HOST: ${{ secrets.SSH_HOST }}
-      - name: pm2 stop
-        run: ssh deploy 'pm2 stop extranet'
-      - name: Fetch repo
-        run: ssh deploy 'cd CDeployment && git fetch && git reset --hard origin/master'
-      - name: Npm install
-        run: ssh deploy 'cd CDeployment && npm install'
-      - name: Npm run build
-        run: ssh deploy 'cd CDeployment && npm run build'
-      - name: Npm run preview
-        run: ssh deploy 'cd CDeployment && pm2 start extranet'
+    - name: pm2 stop
+      run: ssh deploy 'pm2 stop extranet'
+    - name: Fetch repo
+      run: ssh deploy 'cd CDeployment && git fetch && git reset --hard origin/master'
+    - name: Npm install
+      run: ssh deploy 'cd CDeployment && npm install'
+    - name: Npm run build
+      run: ssh deploy 'cd CDeployment && npm run build'
+    - name: Npm run preview
+      run: ssh deploy 'cd CDeployment && pm2 start extranet'
