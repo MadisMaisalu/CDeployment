@@ -41,9 +41,9 @@ jobs:
           StrictHostKeyChecking no
         END
       env:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
+        SSH_USER: ${{ secrets.SSH_USER }}
+        SSH_KEY: ${{ secrets.SSH_KEY }}
+        SSH_HOST: ${{ secrets.SSH_HOST }}
     - name: pm2 stop
       run: ssh deploy 'pm2 stop extranet'
     - name: Fetch repo
