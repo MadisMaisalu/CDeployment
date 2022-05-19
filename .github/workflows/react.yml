@@ -45,7 +45,7 @@ jobs:
         SSH_KEY: ${{ secrets.SSH_KEY }}
         SSH_HOST: ${{ secrets.SSH_HOST }}
     - name: pm2 stop
-      run: ssh deploy 'pm2 stop extranet'
+      run: ssh deploy 'pm2 stop CDeployment'
     - name: Fetch repo
       run: ssh deploy 'cd CDeployment && git fetch && git reset --hard origin/master'
     - name: Npm install
@@ -53,4 +53,4 @@ jobs:
     - name: Npm run build
       run: ssh deploy 'cd CDeployment && npm run build'
     - name: Npm run preview
-      run: ssh deploy 'cd CDeployment && pm2 start extranet'
+      run: ssh deploy 'cd CDeployment && pm2 start CDeployment'
